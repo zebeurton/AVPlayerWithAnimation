@@ -17,6 +17,7 @@
 		75F3F5A4153C44E300BB03E5 /* TTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F3F5A3153C44E300BB03E5 /* TTViewController.m */; };
 		75F3F5B8153C460200BB03E5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F5B7153C460200BB03E5 /* AVFoundation.framework */; };
 		75F3F5BA153C481A00BB03E5 /* littleVid3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 75F3F5B9153C47DD00BB03E5 /* littleVid3.mp4 */; };
+		75F3F5C5153C533500BB03E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F5C4153C533500BB03E5 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		75F3F5A3153C44E300BB03E5 /* TTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTViewController.m; sourceTree = "<group>"; };
 		75F3F5B7153C460200BB03E5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		75F3F5B9153C47DD00BB03E5 /* littleVid3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = littleVid3.mp4; sourceTree = "<group>"; };
+		75F3F5C4153C533500BB03E5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F3F5C5153C533500BB03E5 /* QuartzCore.framework in Frameworks */,
 				75F3F5B8153C460200BB03E5 /* AVFoundation.framework in Frameworks */,
 				75F3F58E153C44E300BB03E5 /* UIKit.framework in Frameworks */,
 				75F3F590153C44E300BB03E5 /* Foundation.framework in Frameworks */,
@@ -72,6 +75,7 @@
 		75F3F58C153C44E300BB03E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75F3F5C4153C533500BB03E5 /* QuartzCore.framework */,
 				75F3F5B7153C460200BB03E5 /* AVFoundation.framework */,
 				75F3F58D153C44E300BB03E5 /* UIKit.framework */,
 				75F3F58F153C44E300BB03E5 /* Foundation.framework */,
