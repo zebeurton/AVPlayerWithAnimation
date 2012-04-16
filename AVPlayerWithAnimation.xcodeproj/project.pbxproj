@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75F3F58E153C44E300BB03E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F58D153C44E300BB03E5 /* UIKit.framework */; };
+		75F3F590153C44E300BB03E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F58F153C44E300BB03E5 /* Foundation.framework */; };
+		75F3F592153C44E300BB03E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F591153C44E300BB03E5 /* CoreGraphics.framework */; };
+		75F3F598153C44E300BB03E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75F3F596153C44E300BB03E5 /* InfoPlist.strings */; };
+		75F3F59A153C44E300BB03E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F3F599153C44E300BB03E5 /* main.m */; };
+		75F3F59E153C44E300BB03E5 /* TTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F3F59D153C44E300BB03E5 /* TTAppDelegate.m */; };
+		75F3F5A1153C44E300BB03E5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F3F59F153C44E300BB03E5 /* MainStoryboard.storyboard */; };
+		75F3F5A4153C44E300BB03E5 /* TTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F3F5A3153C44E300BB03E5 /* TTViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		75F3F589153C44E300BB03E5 /* AVPlayerWithAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerWithAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F3F58D153C44E300BB03E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		75F3F58F153C44E300BB03E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		75F3F591153C44E300BB03E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		75F3F595153C44E300BB03E5 /* AVPlayerWithAnimation-Info.plist */ = {isa = PBXFileReference; path = "AVPlayerWithAnimation-Info.plist"; sourceTree = "<group>"; };
+		75F3F597153C44E300BB03E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75F3F599153C44E300BB03E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75F3F59B153C44E300BB03E5 /* AVPlayerWithAnimation-Prefix.pch */ = {isa = PBXFileReference; path = "AVPlayerWithAnimation-Prefix.pch"; sourceTree = "<group>"; };
+		75F3F59C153C44E300BB03E5 /* TTAppDelegate.h */ = {isa = PBXFileReference; path = TTAppDelegate.h; sourceTree = "<group>"; };
+		75F3F59D153C44E300BB03E5 /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
+		75F3F5A0153C44E300BB03E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		75F3F5A2153C44E300BB03E5 /* TTViewController.h */ = {isa = PBXFileReference; path = TTViewController.h; sourceTree = "<group>"; };
+		75F3F5A3153C44E300BB03E5 /* TTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75F3F586153C44E300BB03E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F3F58E153C44E300BB03E5 /* UIKit.framework in Frameworks */,
+				75F3F590153C44E300BB03E5 /* Foundation.framework in Frameworks */,
+				75F3F592153C44E300BB03E5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75F3F57E153C44E300BB03E5 = {
+			isa = PBXGroup;
+			children = (
+				75F3F593153C44E300BB03E5 /* AVPlayerWithAnimation */,
+				75F3F58C153C44E300BB03E5 /* Frameworks */,
+				75F3F58A153C44E300BB03E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75F3F58A153C44E300BB03E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75F3F589153C44E300BB03E5 /* AVPlayerWithAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75F3F58C153C44E300BB03E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75F3F58D153C44E300BB03E5 /* UIKit.framework */,
+				75F3F58F153C44E300BB03E5 /* Foundation.framework */,
+				75F3F591153C44E300BB03E5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75F3F593153C44E300BB03E5 /* AVPlayerWithAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				75F3F59C153C44E300BB03E5 /* TTAppDelegate.h */,
+				75F3F59D153C44E300BB03E5 /* TTAppDelegate.m */,
+				75F3F59F153C44E300BB03E5 /* MainStoryboard.storyboard */,
+				75F3F5A2153C44E300BB03E5 /* TTViewController.h */,
+				75F3F5A3153C44E300BB03E5 /* TTViewController.m */,
+				75F3F594153C44E300BB03E5 /* Supporting Files */,
+			);
+			path = AVPlayerWithAnimation;
+			sourceTree = "<group>";
+		};
+		75F3F594153C44E300BB03E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75F3F595153C44E300BB03E5 /* AVPlayerWithAnimation-Info.plist */,
+				75F3F596153C44E300BB03E5 /* InfoPlist.strings */,
+				75F3F599153C44E300BB03E5 /* main.m */,
+				75F3F59B153C44E300BB03E5 /* AVPlayerWithAnimation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75F3F588153C44E300BB03E5 /* AVPlayerWithAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75F3F5A7153C44E300BB03E5 /* Build configuration list for PBXNativeTarget "AVPlayerWithAnimation" */;
+			buildPhases = (
+				75F3F585153C44E300BB03E5 /* Sources */,
+				75F3F586153C44E300BB03E5 /* Frameworks */,
+				75F3F587153C44E300BB03E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVPlayerWithAnimation;
+			productName = AVPlayerWithAnimation;
+			productReference = 75F3F589153C44E300BB03E5 /* AVPlayerWithAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75F3F580153C44E300BB03E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TT;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 75F3F583153C44E300BB03E5 /* Build configuration list for PBXProject "AVPlayerWithAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 75F3F57E153C44E300BB03E5;
+			productRefGroup = 75F3F58A153C44E300BB03E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75F3F588153C44E300BB03E5 /* AVPlayerWithAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75F3F587153C44E300BB03E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F3F598153C44E300BB03E5 /* InfoPlist.strings in Resources */,
+				75F3F5A1153C44E300BB03E5 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75F3F585153C44E300BB03E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F3F59A153C44E300BB03E5 /* main.m in Sources */,
+				75F3F59E153C44E300BB03E5 /* TTAppDelegate.m in Sources */,
+				75F3F5A4153C44E300BB03E5 /* TTViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		75F3F596153C44E300BB03E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75F3F597153C44E300BB03E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		75F3F59F153C44E300BB03E5 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75F3F5A0153C44E300BB03E5 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75F3F5A5153C44E300BB03E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		75F3F5A6153C44E300BB03E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75F3F5A8153C44E300BB03E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVPlayerWithAnimation/AVPlayerWithAnimation-Prefix.pch";
+				INFOPLIST_FILE = "AVPlayerWithAnimation/AVPlayerWithAnimation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		75F3F5A9153C44E300BB03E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVPlayerWithAnimation/AVPlayerWithAnimation-Prefix.pch";
+				INFOPLIST_FILE = "AVPlayerWithAnimation/AVPlayerWithAnimation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75F3F583153C44E300BB03E5 /* Build configuration list for PBXProject "AVPlayerWithAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F3F5A5153C44E300BB03E5 /* Debug */,
+				75F3F5A6153C44E300BB03E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75F3F5A7153C44E300BB03E5 /* Build configuration list for PBXNativeTarget "AVPlayerWithAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F3F5A8153C44E300BB03E5 /* Debug */,
+				75F3F5A9153C44E300BB03E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75F3F580153C44E300BB03E5 /* Project object */;
+}
