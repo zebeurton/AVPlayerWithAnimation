@@ -15,6 +15,8 @@
 		75F3F59E153C44E300BB03E5 /* TTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F3F59D153C44E300BB03E5 /* TTAppDelegate.m */; };
 		75F3F5A1153C44E300BB03E5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F3F59F153C44E300BB03E5 /* MainStoryboard.storyboard */; };
 		75F3F5A4153C44E300BB03E5 /* TTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F3F5A3153C44E300BB03E5 /* TTViewController.m */; };
+		75F3F5B8153C460200BB03E5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F5B7153C460200BB03E5 /* AVFoundation.framework */; };
+		75F3F5BA153C481A00BB03E5 /* littleVid3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 75F3F5B9153C47DD00BB03E5 /* littleVid3.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +24,17 @@
 		75F3F58D153C44E300BB03E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		75F3F58F153C44E300BB03E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		75F3F591153C44E300BB03E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		75F3F595153C44E300BB03E5 /* AVPlayerWithAnimation-Info.plist */ = {isa = PBXFileReference; path = "AVPlayerWithAnimation-Info.plist"; sourceTree = "<group>"; };
+		75F3F595153C44E300BB03E5 /* AVPlayerWithAnimation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AVPlayerWithAnimation-Info.plist"; sourceTree = "<group>"; };
 		75F3F597153C44E300BB03E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		75F3F599153C44E300BB03E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		75F3F59B153C44E300BB03E5 /* AVPlayerWithAnimation-Prefix.pch */ = {isa = PBXFileReference; path = "AVPlayerWithAnimation-Prefix.pch"; sourceTree = "<group>"; };
-		75F3F59C153C44E300BB03E5 /* TTAppDelegate.h */ = {isa = PBXFileReference; path = TTAppDelegate.h; sourceTree = "<group>"; };
+		75F3F59B153C44E300BB03E5 /* AVPlayerWithAnimation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVPlayerWithAnimation-Prefix.pch"; sourceTree = "<group>"; };
+		75F3F59C153C44E300BB03E5 /* TTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAppDelegate.h; sourceTree = "<group>"; };
 		75F3F59D153C44E300BB03E5 /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
 		75F3F5A0153C44E300BB03E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		75F3F5A2153C44E300BB03E5 /* TTViewController.h */ = {isa = PBXFileReference; path = TTViewController.h; sourceTree = "<group>"; };
+		75F3F5A2153C44E300BB03E5 /* TTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTViewController.h; sourceTree = "<group>"; };
 		75F3F5A3153C44E300BB03E5 /* TTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTViewController.m; sourceTree = "<group>"; };
+		75F3F5B7153C460200BB03E5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		75F3F5B9153C47DD00BB03E5 /* littleVid3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = littleVid3.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F3F5B8153C460200BB03E5 /* AVFoundation.framework in Frameworks */,
 				75F3F58E153C44E300BB03E5 /* UIKit.framework in Frameworks */,
 				75F3F590153C44E300BB03E5 /* Foundation.framework in Frameworks */,
 				75F3F592153C44E300BB03E5 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +72,7 @@
 		75F3F58C153C44E300BB03E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75F3F5B7153C460200BB03E5 /* AVFoundation.framework */,
 				75F3F58D153C44E300BB03E5 /* UIKit.framework */,
 				75F3F58F153C44E300BB03E5 /* Foundation.framework */,
 				75F3F591153C44E300BB03E5 /* CoreGraphics.framework */,
@@ -77,6 +83,7 @@
 		75F3F593153C44E300BB03E5 /* AVPlayerWithAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				75F3F5C3153C529900BB03E5 /* Resources */,
 				75F3F59C153C44E300BB03E5 /* TTAppDelegate.h */,
 				75F3F59D153C44E300BB03E5 /* TTAppDelegate.m */,
 				75F3F59F153C44E300BB03E5 /* MainStoryboard.storyboard */,
@@ -96,6 +103,14 @@
 				75F3F59B153C44E300BB03E5 /* AVPlayerWithAnimation-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75F3F5C3153C529900BB03E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75F3F5B9153C47DD00BB03E5 /* littleVid3.mp4 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F3F5BA153C481A00BB03E5 /* littleVid3.mp4 in Resources */,
 				75F3F598153C44E300BB03E5 /* InfoPlist.strings in Resources */,
 				75F3F5A1153C44E300BB03E5 /* MainStoryboard.storyboard in Resources */,
 			);

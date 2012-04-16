@@ -1,5 +1,5 @@
 //
-//  TTViewController.h
+//  TTPlayerViewController.h
 //  AVPlayerWithAnimation
 //
 //  Created by Drugeon-Hamon David on 16/04/12.
@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class AVPlayer;
+
 @interface TTViewController : UIViewController
+@property (strong, nonatomic) AVPlayer* moviePlayer;
 
 @end
