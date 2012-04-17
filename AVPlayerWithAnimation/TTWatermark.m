@@ -9,6 +9,6 @@
 #import "TTWatermark.h"
 
 @implementation TTWatermark
-@synthesize x = _x;
-@synthesize y = _y;
+@synthesize fromPosition = _fromPosition;
+@synthesize toPosition = _toPosition;
 @end

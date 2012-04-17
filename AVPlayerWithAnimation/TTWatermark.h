@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface TTWatermark : NSObject
-@property double x;
-@property double y;
+@property CGPoint fromPosition;
+@property CGPoint toPosition;
 @end
