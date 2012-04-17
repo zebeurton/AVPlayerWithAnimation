@@ -15,6 +15,7 @@
 static void *TTViewControllerStatusObservationContext = &TTViewControllerStatusObservationContext;
 
 @interface TTViewController ()
+@property (strong, nonatomic) AVPlayer* moviePlayer;
 @property (strong, nonatomic) AVPlayerLayer* moviePlayerLayer;
 @property (strong, nonatomic) CALayer* watermarkLayer;
 @property (strong, nonatomic) TTWatermark *watermark;

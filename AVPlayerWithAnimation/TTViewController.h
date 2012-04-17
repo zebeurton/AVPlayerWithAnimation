@@ -11,6 +11,5 @@
 @class AVPlayer;
 
 @interface TTViewController : UIViewController
-@property (strong, nonatomic) AVPlayer* moviePlayer;
 
 @end
