@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75111785153D7DBE0030F6BC /* TTWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = 75111784153D7DBE0030F6BC /* TTWatermark.m */; };
+		7511178C153D7F9F0030F6BC /* TTImageWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = 7511178B153D7F9F0030F6BC /* TTImageWatermark.m */; };
+		7511178F153D8AAC0030F6BC /* TTTextWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = 7511178E153D8AAC0030F6BC /* TTTextWatermark.m */; };
 		75F3F58E153C44E300BB03E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F58D153C44E300BB03E5 /* UIKit.framework */; };
 		75F3F590153C44E300BB03E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F58F153C44E300BB03E5 /* Foundation.framework */; };
 		75F3F592153C44E300BB03E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F591153C44E300BB03E5 /* CoreGraphics.framework */; };
@@ -18,9 +21,17 @@
 		75F3F5B8153C460200BB03E5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F5B7153C460200BB03E5 /* AVFoundation.framework */; };
 		75F3F5BA153C481A00BB03E5 /* littleVid3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 75F3F5B9153C47DD00BB03E5 /* littleVid3.mp4 */; };
 		75F3F5C5153C533500BB03E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F5C4153C533500BB03E5 /* QuartzCore.framework */; };
+		75F3F5CD153C6FD300BB03E5 /* TTImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F3F5CC153C6FD300BB03E5 /* TTImageLayer.m */; };
+		75F3F5CF153C73B200BB03E5 /* CoreAnimation.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F3F5CE153C73B200BB03E5 /* CoreAnimation.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75111783153D7DBE0030F6BC /* TTWatermark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWatermark.h; sourceTree = "<group>"; };
+		75111784153D7DBE0030F6BC /* TTWatermark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWatermark.m; sourceTree = "<group>"; };
+		7511178A153D7F9F0030F6BC /* TTImageWatermark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImageWatermark.h; sourceTree = "<group>"; };
+		7511178B153D7F9F0030F6BC /* TTImageWatermark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImageWatermark.m; sourceTree = "<group>"; };
+		7511178D153D8AAC0030F6BC /* TTTextWatermark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTextWatermark.h; sourceTree = "<group>"; };
+		7511178E153D8AAC0030F6BC /* TTTextWatermark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTextWatermark.m; sourceTree = "<group>"; };
 		75F3F589153C44E300BB03E5 /* AVPlayerWithAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerWithAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F3F58D153C44E300BB03E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		75F3F58F153C44E300BB03E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +48,9 @@
 		75F3F5B7153C460200BB03E5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		75F3F5B9153C47DD00BB03E5 /* littleVid3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = littleVid3.mp4; sourceTree = "<group>"; };
 		75F3F5C4153C533500BB03E5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		75F3F5CB153C6FD300BB03E5 /* TTImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImageLayer.h; sourceTree = "<group>"; };
+		75F3F5CC153C6FD300BB03E5 /* TTImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImageLayer.m; sourceTree = "<group>"; };
+		75F3F5CE153C73B200BB03E5 /* CoreAnimation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoreAnimation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +69,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75111781153D7D410030F6BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75111783153D7DBE0030F6BC /* TTWatermark.h */,
+				75111784153D7DBE0030F6BC /* TTWatermark.m */,
+				7511178A153D7F9F0030F6BC /* TTImageWatermark.h */,
+				7511178B153D7F9F0030F6BC /* TTImageWatermark.m */,
+				7511178D153D8AAC0030F6BC /* TTTextWatermark.h */,
+				7511178E153D8AAC0030F6BC /* TTTextWatermark.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		75111782153D7D4E0030F6BC /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				75F3F5CB153C6FD300BB03E5 /* TTImageLayer.h */,
+				75F3F5CC153C6FD300BB03E5 /* TTImageLayer.m */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
 		75F3F57E153C44E300BB03E5 = {
 			isa = PBXGroup;
 			children = (
@@ -87,12 +123,14 @@
 		75F3F593153C44E300BB03E5 /* AVPlayerWithAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				75F3F5C3153C529900BB03E5 /* Resources */,
 				75F3F59C153C44E300BB03E5 /* TTAppDelegate.h */,
 				75F3F59D153C44E300BB03E5 /* TTAppDelegate.m */,
 				75F3F59F153C44E300BB03E5 /* MainStoryboard.storyboard */,
 				75F3F5A2153C44E300BB03E5 /* TTViewController.h */,
 				75F3F5A3153C44E300BB03E5 /* TTViewController.m */,
+				75111782153D7D4E0030F6BC /* Layers */,
+				75111781153D7D410030F6BC /* Model */,
+				75F3F5C3153C529900BB03E5 /* Resources */,
 				75F3F594153C44E300BB03E5 /* Supporting Files */,
 			);
 			path = AVPlayerWithAnimation;
@@ -112,6 +150,7 @@
 		75F3F5C3153C529900BB03E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				75F3F5CE153C73B200BB03E5 /* CoreAnimation.png */,
 				75F3F5B9153C47DD00BB03E5 /* littleVid3.mp4 */,
 			);
 			name = Resources;
@@ -171,6 +210,7 @@
 				75F3F5BA153C481A00BB03E5 /* littleVid3.mp4 in Resources */,
 				75F3F598153C44E300BB03E5 /* InfoPlist.strings in Resources */,
 				75F3F5A1153C44E300BB03E5 /* MainStoryboard.storyboard in Resources */,
+				75F3F5CF153C73B200BB03E5 /* CoreAnimation.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +224,10 @@
 				75F3F59A153C44E300BB03E5 /* main.m in Sources */,
 				75F3F59E153C44E300BB03E5 /* TTAppDelegate.m in Sources */,
 				75F3F5A4153C44E300BB03E5 /* TTViewController.m in Sources */,
+				75F3F5CD153C6FD300BB03E5 /* TTImageLayer.m in Sources */,
+				75111785153D7DBE0030F6BC /* TTWatermark.m in Sources */,
+				7511178C153D7F9F0030F6BC /* TTImageWatermark.m in Sources */,
+				7511178F153D8AAC0030F6BC /* TTTextWatermark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +339,7 @@
 				75F3F5A9153C44E300BB03E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
