@@ -100,8 +100,6 @@
 		75F3F57E153C44E300BB03E5 = {
 			isa = PBXGroup;
 			children = (
-				7511179A153DBF710030F6BC /* CoreMedia.framework */,
-				75111790153DADFB0030F6BC /* CoreText.framework */,
 				75F3F593153C44E300BB03E5 /* AVPlayerWithAnimation */,
 				75F3F58C153C44E300BB03E5 /* Frameworks */,
 				75F3F58A153C44E300BB03E5 /* Products */,
@@ -119,6 +117,8 @@
 		75F3F58C153C44E300BB03E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7511179A153DBF710030F6BC /* CoreMedia.framework */,
+				75111790153DADFB0030F6BC /* CoreText.framework */,
 				75F3F5C4153C533500BB03E5 /* QuartzCore.framework */,
 				75F3F5B7153C460200BB03E5 /* AVFoundation.framework */,
 				75F3F58D153C44E300BB03E5 /* UIKit.framework */,
