@@ -10,6 +10,8 @@
 		75111785153D7DBE0030F6BC /* TTWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = 75111784153D7DBE0030F6BC /* TTWatermark.m */; };
 		7511178C153D7F9F0030F6BC /* TTImageWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = 7511178B153D7F9F0030F6BC /* TTImageWatermark.m */; };
 		7511178F153D8AAC0030F6BC /* TTTextWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = 7511178E153D8AAC0030F6BC /* TTTextWatermark.m */; };
+		75111791153DADFB0030F6BC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75111790153DADFB0030F6BC /* CoreText.framework */; };
+		7511179B153DBF710030F6BC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7511179A153DBF710030F6BC /* CoreMedia.framework */; };
 		75F3F58E153C44E300BB03E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F58D153C44E300BB03E5 /* UIKit.framework */; };
 		75F3F590153C44E300BB03E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F58F153C44E300BB03E5 /* Foundation.framework */; };
 		75F3F592153C44E300BB03E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F3F591153C44E300BB03E5 /* CoreGraphics.framework */; };
@@ -32,6 +34,8 @@
 		7511178B153D7F9F0030F6BC /* TTImageWatermark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImageWatermark.m; sourceTree = "<group>"; };
 		7511178D153D8AAC0030F6BC /* TTTextWatermark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTextWatermark.h; sourceTree = "<group>"; };
 		7511178E153D8AAC0030F6BC /* TTTextWatermark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTextWatermark.m; sourceTree = "<group>"; };
+		75111790153DADFB0030F6BC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		7511179A153DBF710030F6BC /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		75F3F589153C44E300BB03E5 /* AVPlayerWithAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerWithAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F3F58D153C44E300BB03E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		75F3F58F153C44E300BB03E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7511179B153DBF710030F6BC /* CoreMedia.framework in Frameworks */,
+				75111791153DADFB0030F6BC /* CoreText.framework in Frameworks */,
 				75F3F5C5153C533500BB03E5 /* QuartzCore.framework in Frameworks */,
 				75F3F5B8153C460200BB03E5 /* AVFoundation.framework in Frameworks */,
 				75F3F58E153C44E300BB03E5 /* UIKit.framework in Frameworks */,
@@ -94,6 +100,8 @@
 		75F3F57E153C44E300BB03E5 = {
 			isa = PBXGroup;
 			children = (
+				7511179A153DBF710030F6BC /* CoreMedia.framework */,
+				75111790153DADFB0030F6BC /* CoreText.framework */,
 				75F3F593153C44E300BB03E5 /* AVPlayerWithAnimation */,
 				75F3F58C153C44E300BB03E5 /* Frameworks */,
 				75F3F58A153C44E300BB03E5 /* Products */,
