@@ -11,4 +11,5 @@
 @implementation TTWatermark
 @synthesize fromPosition = _fromPosition;
 @synthesize toPosition = _toPosition;
+@synthesize duration = _duration;
 @end

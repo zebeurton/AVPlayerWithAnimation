@@ -11,4 +11,5 @@
 @interface TTWatermark : NSObject
 @property CGPoint fromPosition;
 @property CGPoint toPosition;
+@property int duration;
 @end
