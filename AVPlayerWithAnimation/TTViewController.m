@@ -23,9 +23,9 @@ static void *MoviePlayerReadyToDisplayObservationContext = &MoviePlayerReadyToDi
 }
 @property (strong, nonatomic) AVPlayer* moviePlayer;
 @property (strong, nonatomic) AVPlayerLayer* moviePlayerLayer;
-@property (strong, nonatomic) CALayer* watermarkLayer;
-@property (strong, nonatomic) TTWatermark *watermark;
-@property (strong, nonatomic) CATextLayer *timecodeLayer;
+@property (strong, nonatomic) NSMutableArray* watermarkLayers;
+@property (strong, nonatomic) NSMutableArray* watermarks;
+@property (strong, nonatomic) CATextLayer* timecodeLayer;
 
 - (void) updateTimecode:(CMTime) time;
 @end
@@ -33,19 +33,41 @@ static void *MoviePlayerReadyToDisplayObservationContext = &MoviePlayerReadyToDi
 @implementation TTViewController
 @synthesize moviePlayer = _moviePlayer;
 @synthesize moviePlayerLayer = _moviePlayerLayer;
-@synthesize watermarkLayer = _watermarkLayer;
-@synthesize watermark = _watermark;
+@synthesize watermarkLayers = _watermarkLayer;
+@synthesize watermarks = _watermark;
 @synthesize timecodeLayer = _timecodeLabel;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    // Initialize the watermarks to add above the video
-    self.watermark = [[TTImageWatermark alloc] initWithImageName:@"CoreAnimation.png"];
-    self.watermark.fromPosition = CGPointMake (0, self.view.frame.size.width / 2);
-    self.watermark.toPosition = CGPointMake(self.view.frame.size.height, self.view.frame.size.width / 2);
+    // Initialize the MoviePlayer and its layer
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"littleVid3" withExtension:@"mp4"];
+    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:url options:nil];
     
+    AVPlayerItem *item = [AVPlayerItem playerItemWithAsset:asset];
+    self.moviePlayer = [AVPlayer playerWithPlayerItem:item];
+    [self.moviePlayer addObserver:self forKeyPath:@"status" options:0 context:MoviePlayerStatusObservationContext];
+    
+    _observer = [self.moviePlayer addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(1, NSEC_PER_SEC) queue:NULL usingBlock:^(CMTime time){
+        [self updateTimecode:time];
+    }];
+    
+    // Initialize the watermarks to add above the video
+    self.watermarkLayers = [[NSMutableArray alloc] init];
+    self.watermarks = [[NSMutableArray alloc] init];
+    TTWatermark *watermark = [[TTImageWatermark alloc] initWithImageName:@"CoreAnimation.png"];
+    watermark.fromPosition = CGPointMake (0, self.view.frame.size.width / 2);
+    watermark.toPosition = CGPointMake(self.view.frame.size.height, self.view.frame.size.width / 2);
+    watermark.duration = CMTimeGetSeconds(item.duration) / 4;
+    [self.watermarks addObject:watermark];
+
+    watermark = [[TTTextWatermark alloc] initWithText:@"email@gmail.com"];
+    watermark.fromPosition = CGPointMake (self.view.frame.size.height, 0);
+    watermark.toPosition = CGPointMake(0, self.view.frame.size.width);
+    watermark.duration = CMTimeGetSeconds(item.duration) / 4;
+    [self.watermarks addObject:watermark];
+
     // Create gesture recognizer to handle zoom in / zoom out
     // with double taps with one finger
     UITapGestureRecognizer *oneFingerTwoTaps = 
@@ -57,18 +79,6 @@ static void *MoviePlayerReadyToDisplayObservationContext = &MoviePlayerReadyToDi
     
     // Add the gesture to the view
     [[self view] addGestureRecognizer:oneFingerTwoTaps];
-
-    // Initialize the MoviePlayer and its layer
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"littleVid3" withExtension:@"mp4"];
-    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:url options:nil];
-
-    AVPlayerItem *item = [AVPlayerItem playerItemWithAsset:asset];
-    self.moviePlayer = [AVPlayer playerWithPlayerItem:item];
-    [self.moviePlayer addObserver:self forKeyPath:@"status" options:0 context:MoviePlayerStatusObservationContext];
-
-    _observer = [self.moviePlayer addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(1, NSEC_PER_SEC) queue:NULL usingBlock:^(CMTime time){
-        [self updateTimecode:time];
-    }];
 
 }
 
@@ -84,7 +94,11 @@ static void *MoviePlayerReadyToDisplayObservationContext = &MoviePlayerReadyToDi
     [_moviePlayerLayer removeFromSuperlayer];
     _moviePlayerLayer = nil;
     
-    [_watermarkLayer removeFromSuperlayer];
+    for (CALayer* watermark in _watermarkLayer) {
+        [watermark removeFromSuperlayer];
+        [_watermarkLayer removeObject:watermark];
+    }
+    
     _watermarkLayer = nil;
 }
 
@@ -117,21 +131,41 @@ static void *MoviePlayerReadyToDisplayObservationContext = &MoviePlayerReadyToDi
             [self.moviePlayerLayer addObserver:self forKeyPath:@"readyForDisplay" options:0 context:MoviePlayerReadyToDisplayObservationContext];
 
             // Create watermarks layer
-            self.watermarkLayer = [[TTImageLayer alloc] initWithImageName:((TTImageWatermark*)self.watermark).imageName];  
-            self.watermarkLayer.anchorPoint = CGPointMake(0, 0.5);
-            self.watermarkLayer.hidden = YES;
-            //CATextLayer *textLayer = [CATextLayer layer];
-            //textLayer.bounds = CGRectMake(0.0f, 0.0f, 300.0f, 30.0f);
-            //textLayer.string = ((TTTextWatermark*)self.watermark).text;
-            //textLayer.position = CGPointMake(self.watermark.fromX, self.watermark.fromY);
-            //textLayer.font = CTFontCreateWithName( (CFStringRef)@"Courier", 0.0, NULL);
-            //textLayer.fontSize = 20;
-            //textLayer.wrapped = YES;
-            //textLayer.alignmentMode = kCAAlignmentCenter;
-            //textLayer.anchorPoint = CGPointMake(0, 0);
-            //self.watermarkLayer = textLayer;
-            [self.view.layer insertSublayer:self.watermarkLayer above:self.moviePlayerLayer];
-            
+            AVPlayerItem *item = self.moviePlayer.currentItem;
+            for (TTWatermark* watermark in self.watermarks) {
+                CALayer* watermarkLayer;
+                
+                if ([watermark isKindOfClass:[TTImageWatermark class]]) {
+                    watermarkLayer = [[TTImageLayer alloc] initWithImageName:((TTImageWatermark*)watermark).imageName];  
+                    watermarkLayer.anchorPoint = CGPointMake(0, 0.5);
+                }
+                else if ([watermark isKindOfClass:[TTTextWatermark class]]) {
+                    watermarkLayer = [CATextLayer layer];
+                    watermarkLayer.borderColor = [UIColor whiteColor].CGColor;
+                    watermarkLayer.borderWidth = 1;
+                    ((CATextLayer*)watermarkLayer).string = ((TTTextWatermark*) watermark).text;  
+                    watermarkLayer.bounds = CGRectMake(0.0f, 0.0f, 200.0f, 15.0f);
+                    ((CATextLayer*)watermarkLayer).font = CTFontCreateWithName( (CFStringRef)@"Courier", 0.0, NULL);
+                    ((CATextLayer*)watermarkLayer).fontSize = 20;
+                    ((CATextLayer*)watermarkLayer).wrapped = YES;
+                    ((CATextLayer*)watermarkLayer).alignmentMode = kCAAlignmentLeft;
+                    watermarkLayer.anchorPoint = CGPointMake(1, 1);
+
+                }
+                watermarkLayer.hidden = YES;
+                [self.watermarkLayers addObject:watermarkLayer];
+                [self.view.layer insertSublayer:watermarkLayer above:self.moviePlayerLayer];
+                
+                CABasicAnimation *animation = [CABasicAnimation animation];
+                animation.fromValue = [NSValue valueWithCGPoint:watermark.fromPosition];
+                animation.toValue = [NSValue valueWithCGPoint:watermark.toPosition];
+                animation.removedOnCompletion = NO;
+                animation.beginTime = AVCoreAnimationBeginTimeAtZero;
+                animation.duration = watermark.duration;
+                animation.fillMode = kCAFillModeBoth;
+                [watermarkLayer addAnimation:animation forKey:@"position"];
+            }
+
             self.timecodeLayer = [CATextLayer layer];
             self.timecodeLayer.position = CGPointMake(self.view.frame.size.height / 2, 0);
             self.timecodeLayer.bounds = CGRectMake(0.0f, 0.0f, 100.0f, 15.0f);
@@ -141,26 +175,19 @@ static void *MoviePlayerReadyToDisplayObservationContext = &MoviePlayerReadyToDi
             self.timecodeLayer.alignmentMode = kCAAlignmentLeft;
             self.timecodeLayer.anchorPoint = CGPointMake(0.5, 0);
             [self.view.layer insertSublayer:self.timecodeLayer above:self.moviePlayerLayer];
-
-            AVPlayerItem *item = self.moviePlayer.currentItem;
-            CABasicAnimation *animation = [CABasicAnimation animation];
-            animation.fromValue = [NSValue valueWithCGPoint:self.watermark.fromPosition];
-            animation.toValue = [NSValue valueWithCGPoint:self.watermark.toPosition];
-            animation.removedOnCompletion = NO;
-            animation.beginTime = AVCoreAnimationBeginTimeAtZero;
-            animation.duration = CMTimeGetSeconds(item.duration) / 4;
-            animation.fillMode = kCAFillModeForwards;
-            animation.repeatCount = 2;
-            [self.watermarkLayer addAnimation:animation forKey:@"position"];
         }
     }
     else if (context == MoviePlayerReadyToDisplayObservationContext) {
         [self.moviePlayerLayer removeObserver:self forKeyPath:@"readyForDisplay" context:MoviePlayerReadyToDisplayObservationContext];
-
-        self.watermarkLayer.hidden = NO;
-
+        
         AVSynchronizedLayer *syncLayer = [AVSynchronizedLayer synchronizedLayerWithPlayerItem:self.moviePlayer.currentItem];
-        [syncLayer addSublayer:self.watermarkLayer];
+
+        for (CALayer *layer in self.watermarkLayers) {
+            layer.hidden = NO;
+            [syncLayer addSublayer:layer];
+        }
+
+        [syncLayer addSublayer:self.timecodeLayer];
         [self.view.layer addSublayer:syncLayer];
         
         [self.moviePlayer play];
